@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 MAINTAINER Xavier Jodoin <xavier@jodoin.me>
 
 # zookeeper
@@ -15,7 +15,7 @@ EXPOSE 60030
 RUN mkdir /hbase-setup
 WORKDIR /hbase-setup
 
-ENV HBASE_VERSION 1.1.5
+ENV HBASE_VERSION 1.2.3
 ADD ./install-hbase.sh /hbase-setup/
 RUN ./install-hbase.sh
 
