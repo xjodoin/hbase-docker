@@ -21,7 +21,12 @@ RUN ./install-hbase.sh
 
 RUN /opt/hbase/bin/hbase-config.sh
 
-ADD hbase-site.xml /opt/hbase/conf/hbase-site.xml
+ADD ./hbase-site.xml /opt/hbase/conf/hbase-site.xml
+
+ADD ./zoo.cfg /opt/hbase/conf/zoo.cfg
+
+ADD ./replace-hostname /opt/replace-hostname
+
 ADD start-pseudo-distributed.sh /opt/hbase/bin/start-pseudo-distributed.sh
 
 WORKDIR /opt/hbase/bin
