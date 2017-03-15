@@ -9,7 +9,6 @@
 #
 declare -a files=(
 	'/opt/hbase/conf/hbase-site.xml'
-	'/opt/hbase/conf/zoo.cfg'
 )
 
 for file in "${files[@]}"; do
