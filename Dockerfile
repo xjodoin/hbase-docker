@@ -15,7 +15,7 @@ EXPOSE 60030
 RUN mkdir /hbase-setup
 WORKDIR /hbase-setup
 
-ENV HBASE_VERSION 1.2.3
+ENV HBASE_VERSION 1.1.12
 ADD ./install-hbase.sh /hbase-setup/
 RUN ./install-hbase.sh
 
